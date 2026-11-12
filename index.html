@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SPORTIFY TV - Live Sports Streaming</title>
     <meta name="description" content="Watch live sports streaming including Cricket, Football, and major leagues worldwide on SPORTIFY TV.">
-    
-    <!-- SEO KEYWORDS ADDED -->
     <meta name="keywords" content="Sportify TV, Live Football Streaming, UEFA Champions League Live, Premier League Live Stream, La Liga Live, Serie A Streaming, Ligue 1 Live, FIFA World Cup Streaming, Euro Cup Live, Football Highlights, IPL Live Streaming, Indian Premier League, BPL Live, Bangladesh Premier League, PSL Live Stream, Pakistan Super League, ICC World Cup Live, T20 World Cup Streaming, Asia Cup Live, Live Cricket Score, Free Sports Stream">
-    
-    <!-- SEO & Mobile Optimization -->
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#000000">
-    <link rel="canonical" href="https://sportify-tv.github.io/" />
     
-    <!-- 1. Google Analytics -->
+    <link id="dynamic-canonical" rel="canonical" href="" />
+    <meta property="og:site_name" content="SPORTIFY TV">
+    <meta property="og:type" content="website">
+    <meta property="og:title" id="og-title" content="SPORTIFY TV - Live Sports Streaming">
+    <meta property="og:description" id="og-desc" content="Watch live sports streaming including Cricket, Football, and major leagues worldwide on SPORTIFY TV.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="tw-title" content="SPORTIFY TV - Live Sports Streaming">
+    <meta name="twitter:description" id="tw-desc" content="Watch live sports streaming worldwide on SPORTIFY TV.">
+
     <script async src='https://www.googletagmanager.com/gtag/js?id=G-QGT6JCVYQS'></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -23,25 +26,18 @@
       gtag('config', 'G-QGT6JCVYQS');
     </script>
 
-    <!-- 2. Security -->
     <script src='https://cdn.jsdelivr.net/npm/disable-devtool' defer></script>
 
-    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- FontAwesome -->
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet' media="print" onload="this.media='all'"/>
     <noscript><link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/></noscript>
-    
-    <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap' rel='stylesheet' media="print" onload="this.media='all'"/>
     <link href='https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&amp;display=swap' rel='stylesheet' media="print" onload="this.media='all'"/>
     <link href='https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;display=swap' rel='stylesheet' media="print" onload="this.media='all'"/>
 
     <style>
       :root {
-        /* THEME VARIABLES */
         --bg-body: #000000;
         --header-bg: #000000;
         --card-bg: #111111;
@@ -88,7 +84,6 @@
       ul { list-style: none; padding: 0; margin: 0; }
       .widget h2, .widget .title { display: none !important; }
 
-      /* SIDEBAR */
       .sidebar-panel { position: fixed; top: 0; left: -320px; width: 300px; height: 100%; background: #121212; z-index: 1000; transition: left 0.3s ease; display: flex; flex-direction: column; padding: 0 !important; margin: 0 !important; color: #fff; border-right: 1px solid #333; overflow-y: auto; }
       .sidebar-panel.active { left: 0; box-shadow: 5px 0 15px rgba(0,0,0,0.8); }
       .sidebar-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 900; display: none; backdrop-filter: blur(2px); }
@@ -104,31 +99,26 @@
       .sb-socials i { font-size: 18px; color: #888; cursor: pointer; transition: 0.2s; }
       .sb-ver { font-size: 11px; color: #555; }
 
-      /* HEADER & LAYOUT */
       .main-wrapper { max-width: 600px; margin: 0 auto; min-height: 100vh; position: relative; display: flex; flex-direction: column; width: 100%; transition: max-width 0.3s; }
       .header-container { background: var(--header-bg); padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-color); transition: background 0.3s; }
       .icon-box { width: 40px; height: 40px; background: var(--primary); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px; cursor: pointer; }
       .logo-main { font-family: 'Permanent Marker', cursive; font-size: 28px; color: var(--text-main); }
       .content-area { padding: 10px; flex: 1; }
 
-      /* SOCIAL CARD */
       .social-card { background: var(--social-bg); border: 1px solid #4CAF50; border-radius: 6px; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; color: var(--social-text); }
       .card-left { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; }
       .card-btn { background: #25d366; color: #fff; padding: 8px 20px; border-radius: 4px; font-size: 13px; font-weight: 700; cursor: pointer; border: none; }
       .btn-tg { background: #0088cc; }
       
-      /* FILTERS */
       .filter-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 20px; }
       .f-btn { background: var(--card-bg); color: var(--text-main); border: 1px solid var(--border-color); padding: 10px 0; border-radius: 5px; font-weight: 600; font-size: 13px; cursor: pointer; text-align: center; }
       .f-btn.active { background: var(--border-color); }
 
-      /* MATCH CARD */
       #match-list-container { display: flex; flex-direction: column; gap: 15px; padding-bottom: 40px; }
       .m-card { background: var(--card-bg); color: var(--text-main); border-radius: 12px; padding: 12px 12px 10px 12px; border: 1px solid var(--border-color); position: relative; cursor: pointer; display: flex; flex-direction: column; min-height: 135px; }
       .m-card.live { border: 1px solid var(--border-green); box-shadow: 0 0 5px rgba(57, 255, 20, 0.2); }
       .m-card.upcoming { border: 1px solid var(--border-neon-blue); box-shadow: 0 0 5px rgba(0, 243, 255, 0.2); }
       
-      /* SCROLLING HEADER LOGIC */
       .mc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; width: 100%; gap: 10px; }
       .mc-header-left { display: flex; align-items: center; flex: 1; overflow: hidden; position: relative; height: 25px; min-width: 0; }
       .mc-league-logo { width: 22px; height: 22px; object-fit: contain; flex-shrink: 0; z-index: 10; position: relative; background: var(--card-bg); padding-right: 5px; }
@@ -149,13 +139,11 @@
       .live-txt { color: red; font-size: 11px; font-weight: 800; text-transform: uppercase; }
       @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.1); } 100% { opacity: 1; transform: scale(1); } }
       
-      /* CHAN FOOTER */
       .chan-footer { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border-color); width: 100%; flex-wrap: wrap; }
       .chan-img { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border-color); padding: 2px; background: #fff; object-fit: contain; }
       .chan-count-txt { font-size: 12px; font-weight: 700; color: var(--text-sub); margin-left: 2px; }
       .loading-box { text-align: center; padding: 20px; color: var(--text-sub); font-weight: 600; }
 
-      /* MATCH CENTER - FAST ELECTRIC EFFECT */
       #details-page { display: none; min-height: 100vh; width: 100%; background: #f0f2f5; color: #333; padding-bottom: 20px; }
       body.view-match #main-app { display: none !important; }
       body.view-match #details-page { display: block !important; }
@@ -196,7 +184,6 @@
       .bc-table td { padding: 12px 15px; border-bottom: 1px solid #eee; border-right: 1px solid #eee; color: #333; font-weight: 500; text-align: center; }
       .chan-cell { display: flex; align-items: center; justify-content: center; gap: 10px; }
 
-      /* PREMIUM STREAM LIST (DARK ITEM STYLE) */
       .stream-list-box { margin: 10px 15px; display: flex; flex-direction: column; gap: 12px; }
       .stream-item { background: #161618; border: 1px solid #333; border-radius: 12px; display: flex; align-items: center; padding: 12px; gap: 15px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.3); color: #fff; text-align: left; }
       .stream-item:active { transform: scale(0.98); }
@@ -207,16 +194,13 @@
       .stream-match { font-size: 11px; font-weight: 500; color: #888; text-transform: capitalize; word-wrap: break-word; overflow-wrap: break-word; }
       .stream-watch-btn { background: linear-gradient(to bottom, #10b981, #059669); color: #fff; font-size: 12px; font-weight: 800; padding: 9px 14px; border-radius: 8px; display: flex; align-items: center; gap: 6px; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); flex-shrink: 0; text-transform: uppercase; }
 
-      /* LEGAL NOTICE BOX */
       .disclaimer-box { margin: 20px 15px 20px 15px; color: #444; font-size: 13px; line-height: 1.6; text-align: left; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
       .disclaimer-box h4 { color: #d32f2f; margin-bottom: 12px; font-weight: 900; font-size: 14px; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 10px; }
       .disclaimer-point { margin-bottom: 15px; }
       .disclaimer-point b { color: #222; font-weight: 800; }
 
-      /* PLAYER PAGE UI */
       .pm-top-info { padding: 15px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
       
-      /* MARCHING ANTS EFFECT FOR CHANNEL NAME BOX */
       .pm-chan-name-box { 
           background: #111; color: #fff; padding: 12px 25px; border-radius: 10px; 
           font-weight: 900; font-size: 16px; text-transform: uppercase; 
@@ -233,33 +217,26 @@
           100% { background-position: left 15px top, right 15px bottom, left bottom 15px, right top 15px; }
       }
       
-      /* LED TICKER STYLE */
-      .pm-ticker-wrap { width: calc(100% - 30px); margin: 0 15px; background: #000; border: 2px solid #39ff14; border-radius: 10px; height: 42px; overflow: hidden; display: flex; align-items: center; box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); }
+      .pm-ticker-wrap { width: calc(100% - 30px); margin: 0 15px; background: #000; border: 2px solid #39ff14; border-radius: 10px; height: 42px; overflow: hidden; display: flex; align-items: center; box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); cursor: pointer; }
       .pm-ticker-text { white-space: nowrap; display: inline-block; color: #fff; font-weight: 700; font-size: 13px; padding-left: 100%; animation: pm-ticker-move 20s linear infinite; text-transform: uppercase; }
       @keyframes pm-ticker-move { 0% { transform: translateX(0); } 100% { transform: translateX(-200%); } }
 
-      /* WAITING BOX STYLE - DOTTED */
       .pm-wait-box { width: calc(100% - 30px); margin: 10px 15px 0 15px; background: #111; color: #ffeb3b; padding: 12px; border-radius: 10px; font-weight: 900; font-size: 11px; text-align: center; border: 2px dotted #ffeb3b; letter-spacing: 0.3px; text-transform: uppercase; box-shadow: 0 0 10px rgba(255, 235, 59, 0.2); }
-
-      /* AUDIO NOTICE BOX */
       .pm-audio-notice-box { width: calc(100% - 30px); margin: 15px 15px 0 15px; padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 500; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
       .pm-audio-notice-box b { color: #ffeb3b; }
 
-      /* EXTERNAL PLAYER BUTTONS ROW */
       .pm-ext-btn-row { display: flex; gap: 10px; padding: 0 15px; margin-top: 15px; }
       .ext-btn { flex: 1; padding: 12px; border-radius: 8px; border: none; color: #fff; font-weight: 800; font-size: 12px; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); transition: 0.2s; }
       .ext-btn:active { transform: scale(0.95); }
       .btn-ns { background: linear-gradient(to right, #6c5ce7, #a29bfe); }
       .btn-all { background: linear-gradient(to right, #e17055, #fab1a0); }
 
-      /* PLAYER MODAL - FIXED BACKGROUND VISIBILITY */
       #player-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #121212; z-index: 3000; display: none; flex-direction: column; overflow-y: auto; color: #fff; padding-bottom: 0; }
       #player-modal.active { display: block; }
       .pm-header { background: #fff; padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 3005; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: #000; }
       .pm-logo { font-family: 'Permanent Marker', cursive; color: #000; font-size: 22px; }
       .ph-close { color: red; font-size: 22px; cursor: pointer; }
 
-      /* NEW FOOTER STYLE */
       .player-footer-new { background: #161618; color: #bbb; padding: 30px 20px; border-top: 1px solid #222; text-align: left; }
       .footer-section { margin-bottom: 30px; }
       .footer-h { color: #fff; font-size: 15px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; position: relative; padding-bottom: 8px; width: fit-content; }
@@ -277,7 +254,6 @@
       .footer-copyright { margin-top: 40px; padding-top: 25px; border-top: 1px solid #222; text-align: center; font-size: 13px; font-weight: 500; color: #777; }
       .footer-copyright span { color: var(--accent-red); font-weight: 800; text-transform: uppercase; }
 
-      /* MAIN APP FOOTER */
       .main-footer-dark { background: #000; color: #fff; padding: 20px 20px 20px 20px; text-align: center; margin-top: 10px; border-top: 1px solid #222; }
       .mf-social { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
       .mf-btn { width: 40px; height: 40px; border-radius: 50%; background: #111; display: flex; align-items: center; justify-content: center; color: #fff; border: 1px solid #333; font-size: 16px; transition: 0.3s; }
@@ -291,7 +267,6 @@
       .back-to-top { position: fixed; bottom: 70px; right: 20px; width: 45px; height: 45px; background: #ff0040; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; cursor: pointer; box-shadow: 0 4px 10px rgba(255,0,64,0.4); z-index: 9999; display: none; transition: 0.3s; }
       .back-to-top.show { display: flex; animation: fadeUp 0.3s; }
 
-      /* POPUP */
       #req-popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 10000; display: none; justify-content: center; align-items: center; }
       .req-card { background: #1a1e23; width: 90%; max-width: 350px; border-radius: 16px; padding: 25px; text-align: center; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: popUpAnim 0.3s ease-out; }
       @keyframes popUpAnim { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
@@ -300,7 +275,6 @@
       .req-btn-join { background: #f1c40f; color: #000; padding: 12px 0; width: 100%; border-radius: 8px; font-weight: 800; font-size: 16px; display: block; text-decoration: none; margin-bottom: 20px; transition: 0.2s; }
       .req-footer { display: flex; justify-content: center; gap: 15px; }
       
-      /* NEON BLUE BUTTONS FOR POPUP FOOTER */
       .req-link { 
         background: #00f3ff; 
         color: #000; 
@@ -317,7 +291,6 @@
       }
       .req-link:active { transform: scale(0.95); }
 
-      /* PLAYER UI ELEMENTS */
       .pm-social-box { padding: 20px 15px; display: flex; flex-direction: column; gap: 12px; }
       .pm-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 12px; border-radius: 50px; color: #fff; font-weight: 700; font-size: 14px; text-transform: capitalize; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.2s; }
       .pm-wa { background: #25d366; }
@@ -329,7 +302,6 @@
       #video-wrapper { width: 100%; aspect-ratio: 16/9; background: #000; position: relative; overflow: hidden; }
       .Header { display: none; }
 
-      /* DESKTOP & LAPTOP RESPONSIVE STYLES (NEW UPDATE) */
       @media (min-width: 768px) {
         .main-wrapper { max-width: 1050px; }
         #match-list-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -343,7 +315,6 @@
         .stream-list-box { max-width: 800px; margin: 10px auto 20px auto; }
         .disclaimer-box { max-width: 800px; margin: 20px auto; }
 
-        /* Player on Laptop */
         #player-modal .pm-top-info,
         #player-modal .pm-audio-notice-box,
         #player-modal .pm-ext-btn-row,
@@ -364,12 +335,10 @@
   
   <body>
 
-    <!-- BACK TO TOP BUTTON -->
     <div class='back-to-top' id='btn-back-to-top' onclick='scrollToTop()'>
        <i class='fa-solid fa-chevron-up'></i>
     </div>
 
-    <!-- STARTUP REQUEST POPUP -->
     <div id='req-popup-overlay'>
        <div class='req-card'>
           <div class='req-title'>Request a Match!</div>
@@ -382,7 +351,6 @@
        </div>
     </div>
 
-    <!-- DETAILS PAGE -->
     <div id='details-page'>
        <div class='dp-header'>
           <div class='dp-nav'>
@@ -396,7 +364,6 @@
        </div>
     </div>
 
-    <!-- SIDEBAR -->
     <div class='sidebar-overlay' id='overlay' onclick='toggleSidebar()'></div>
     <div class='sidebar-panel' id='SIDEBAR_MENU_AREA'>
       <div class="sb-header">MENU <i class="fa-solid fa-xmark sb-close-btn" onclick="toggleSidebar()"></i></div>
@@ -415,7 +382,6 @@
              </div>
     </div>
 
-    <!-- PLAYER PAGE -->
     <div id='player-modal'>
       <div class='pm-header'>
          <div class='pm-logo'>SPORTIFY TV</div>
@@ -424,8 +390,8 @@
       
       <div class="pm-top-info">
           <div id="pm-chan-name-box" class="pm-chan-name-box">CHANNEL NAME</div>
-          <div class="pm-ticker-wrap">
-              <div class="pm-ticker-text" id="pm-ticker-text">LOADING TICKER MESSAGE...</div>
+          <div class="pm-ticker-wrap" onclick="window.open('https://t.me/welcomesptv', '_blank')">
+              <div class="pm-ticker-text" id="pm-ticker-text">Join our Telegram channel for the latest updates and direct match links! 📲⚽🏏</div>
           </div>
           <div class="pm-wait-box">PLEASE WAIT 15 SECOND FOR SEE BETTER STREAMING</div>
       </div>
@@ -438,12 +404,10 @@
          <div id='video-wrapper'></div>
       </div>
 
-      <!-- NEW AUDIO NOTICE BOX -->
       <div class="pm-audio-notice-box">
           If the audio is not playing, please click the volume icon <b>🔊</b> on the video player.
       </div>
 
-      <!-- NEW EXTERNAL PLAYER BUTTONS -->
       <div class="pm-ext-btn-row">
           <button class="ext-btn btn-ns" onclick="parseAndOpen('com.genuine.leone')"><i class="fa-solid fa-bolt"></i> NS Player</button>
           <button class="ext-btn btn-all" onclick="parseAndOpen('all')"><i class="fa-solid fa-play"></i> Ext Player</button>
@@ -454,7 +418,6 @@
          <a class='pm-btn pm-wa' href='https://t.me/sptvg' id='pm-wa-btn-btm'><i class='fa-brands fa-whatsapp'></i> Join WhatsApp Group</a>
       </div>
       
-      <!-- FOOTER -->
       <div class="player-footer-new">
           <div class="footer-section">
               <h3 class="footer-h">ABOUT US</h3>
@@ -486,7 +449,6 @@
       <div style='height:20px; background:#161618;'></div>
     </div>
 
-    <!-- MAIN APP -->
     <div class='main-wrapper' id='main-app'>
       <div class='header-container'>
         <div class='icon-box' onclick='toggleSidebar()'><i class='fa-solid fa-bars'></i></div>
@@ -527,8 +489,11 @@
       </div>
     </div>
 
-    <!-- LOGIC -->
     <script>
+      const currentOrigin = window.location.origin;
+      const canonicalTag = document.getElementById('dynamic-canonical');
+      if (canonicalTag) canonicalTag.href = currentOrigin + window.location.pathname;
+
       function toggleSidebar() { document.getElementById('SIDEBAR_MENU_AREA').classList.toggle('active'); document.getElementById('overlay').classList.toggle('active'); }
       function toggleTheme() {
          document.body.classList.toggle('light-mode');
@@ -540,15 +505,14 @@
       window.onscroll = function() { const btn = document.getElementById('btn-back-to-top'); if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) btn.classList.add('show'); else btn.classList.remove('show'); };
       function scrollToTop() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 
-      // UPDATED API ENDPOINT & STREAM FALLBACK
       const API_URL = "https://api.mkmbusiness259.workers.dev/&ivan-flux007";
       const PROXY_URL = "https://external-content.duckduckgo.com/iu/?u=";
       const SMARTLINK_URL = "https://www.effectivegatecpm.com/w6q9i150y?key=4b08b19ec61654084667a37e370d6f99";
       const FALLBACK_STREAM = "https://file.genoads.com/ch1.m3u8";
       
       let allData = {}, allMatches = [], counterInterval = null;
-      let currentRawUrl = ""; // GLOBAL VARIABLE FOR INTENT PLAYER
-      let currentMatchSlug = ""; // ACTIVE MATCH SLUG
+      let currentRawUrl = "";
+      let currentMatchSlug = "";
 
       const urlParams = new URLSearchParams(window.location.search);
       const matchSlug = urlParams.get('match');
@@ -563,14 +527,13 @@
          return `${h}:${m < 10 ? '0'+m : m}:${s < 10 ? '0'+s : s}`;
       }
 
-      // SLUG GENERATOR HELPER
       function slugify(text) {
          return (text || '').toString().toLowerCase().trim()
-            .replace(/\s+/g, '-')           // Replace spaces with -
-            .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-            .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-            .replace(/^-+/, '')             // Trim - from start of text
-            .replace(/-+$/, '');            // Trim - from end of text
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-')
+            .replace(/^-+/, '')
+            .replace(/-+$/, '');
       }
 
       async function initApp() {
@@ -590,7 +553,6 @@
             allMatches = rawEvents.map(item => {
                const info = item.eventInfo || {};
                
-               // Handle stream links & auto-replace https://no.link
                const rawChannels = item.channels_data || item.streamLinks || [];
                const formattedLinks = rawChannels.map((ch, idx) => {
                   let streamLink = ch.link || '';
@@ -607,7 +569,6 @@
                   };
                });
 
-               // Safely parse start & end time
                const startRaw = info.startTime || item.matchTime;
                let sTime = startRaw ? new Date(startRaw) : new Date();
                if(isNaN(sTime.getTime())) sTime = new Date();
@@ -644,7 +605,6 @@
                if(match) {
                    renderDetails(match);
                    
-                   // Check if user opened directly with a specific server slug (e.g. ?match=...&bein-sports-fhd)
                    const allKeys = Array.from(urlParams.keys());
                    const targetChanSlug = allKeys.find(k => k !== 'match');
                    if (targetChanSlug) {
@@ -750,6 +710,17 @@
 
       function renderDetails(match) {
          currentMatchSlug = slugify(`${match.team1Name}-vs-${match.team2Name}`);
+         
+         const dynamicMatchTitle = `${match.team1Name} vs ${match.team2Name} Live Streaming - SPORTIFY TV`;
+         document.title = dynamicMatchTitle;
+         const ogT = document.getElementById('og-title'), ogD = document.getElementById('og-desc');
+         const twT = document.getElementById('tw-title'), twD = document.getElementById('tw-desc');
+         if(ogT) ogT.content = dynamicMatchTitle;
+         if(twT) twT.content = dynamicMatchTitle;
+         if(ogD) ogD.content = `Watch ${match.team1Name} vs ${match.team2Name} live online streaming in HD quality on SPORTIFY TV.`;
+         if(twD) twD.content = `Watch ${match.team1Name} vs ${match.team2Name} live online streaming in HD quality on SPORTIFY TV.`;
+         if(canonicalTag) canonicalTag.href = `${currentOrigin}${window.location.pathname}?match=${currentMatchSlug}`;
+
          const content = document.getElementById('details-content');
          const start = new Date(match.matchTime);
          const timeStr = `${start.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })} | ${start.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}`;
@@ -800,7 +771,6 @@
       
       let adClickCount = 0;
       function triggerAdAndPlay(linkIndex, title, sport) {
-         // ADS CONFIGURATION CHECK: Only show ads if configured as "yes"
          const adsConfig = (allData["ads configuration"] || "").toLowerCase().trim();
          if (adsConfig === "yes") {
              adClickCount++;
@@ -842,7 +812,6 @@
 
       function parseAndOpen(playerPackage) {
           if(!currentRawUrl) return;
-          // STOP INTERNAL IFRAME TO PREVENT DOUBLE AUDIO
           document.getElementById('video-wrapper').innerHTML = "";
           const formatted = formatIntentUrl(currentRawUrl);
           const tgLink = "https://t.me/sptvg?text=Give%20me%20ns%20player%20apk";
@@ -864,7 +833,6 @@
          document.body.style.overflow = 'hidden'; 
          document.getElementById('live-counter-box').style.display = 'inline-flex';
          
-         // SERVER NAME IN URL PARAMETER (NEW UPDATE)
          const chanSlug = slugify(channelName || "live-stream");
          const targetUrl = `${window.location.pathname}?match=${encodeURIComponent(currentMatchSlug)}&${chanSlug}`;
          
@@ -876,14 +844,15 @@
          
          document.getElementById('pm-chan-name-box').innerText = channelName || "Live Stream";
          
-         if(allData.app_control) {
-            const tickerText = allData.app_control.ticker_text;
-            const tickerLink = allData.app_control.ticker_link;
-            const tickerEl = document.getElementById('pm-ticker-text');
-            if(tickerText) {
-                tickerEl.innerText = tickerText;
-                if(tickerLink) { tickerEl.style.cursor = 'pointer'; tickerEl.onclick = () => window.open(tickerLink, "_blank"); }
+         const tickerEl = document.getElementById('pm-ticker-text');
+         if(allData.app_control && allData.app_control.ticker_text) {
+            tickerEl.innerText = allData.app_control.ticker_text;
+            if(allData.app_control.ticker_link) {
+                tickerEl.onclick = () => window.open(allData.app_control.ticker_link, "_blank");
             }
+         } else {
+            tickerEl.innerText = "Join our Telegram channel for the latest updates and direct match links! 📲⚽🏏";
+            tickerEl.onclick = () => window.open("https://t.me/welcomesptv", "_blank");
          }
          
          if(counterInterval) clearInterval(counterInterval);
@@ -892,7 +861,6 @@
          counterInterval = setInterval(updateFakeCounter, 45000); 
          
          const wrapper = document.getElementById('video-wrapper');
-         // DIRECT INJECT IFRAME FROM URL
          wrapper.innerHTML = finalUrl;
       }
 
@@ -904,7 +872,6 @@
           if(counterInterval) clearInterval(counterInterval); 
           document.getElementById('video-wrapper').innerHTML = "";
           
-          // REVERT URL BACK TO MATCH CENTER (WITHOUT SERVER NAME)
           if (!isBackNav) {
               if (history.state && history.state.modalOpen) {
                   history.back();
